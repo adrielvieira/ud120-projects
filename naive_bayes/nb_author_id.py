@@ -26,9 +26,19 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 
 #########################################################
-### your code goes here ###
-#test
+
+def NBAaccuracy (features_train, labels_train, features_test, labels_test):
+
+    import numpy as np
+    from sklearn.naive_bayes import GaussianNB
+    from sklearn.metrics import accuracy_score
+
+    clf = GaussianNB
+    clf.fit(features_train, labels_train) #training the model
+    pred = clf.predict(features_test) #making the predictions
+
+    accuracy = accuracy_score(labels_test, pred) #testing accuracy
+    return accuracy
 
 #########################################################
-
 
