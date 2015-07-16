@@ -40,5 +40,5 @@ def NBAaccuracy (features_train, labels_train, features_test, labels_test):
     accuracy = accuracy_score(labels_test, pred) #testing accuracy
     return accuracy
 
-#########################################################
+#########################################################.#
 
